@@ -19,15 +19,40 @@ import './App.css'
 
 class App extends Component {
   state = { counter: 0 }
+
+  incrementCounter = () => {
+    this.setState({counter: this.state.counter + 1})
+  }
+
+  decrementCounter = () => {
+    this.setState({counter: this.state.counter - 1})
+  }
+
   render() {
     return (
       <>
         <Count counter={ this.state.counter } />
-        <button onClick={() => this.setState((state) => ({ counter: state.counter + 1 }))}>+</button>
-        <button onClick={() => this.setState((state) => ({ counter: state.counter - 1 }))}>-</button>
+        <PlusBtn incrementCounter={this.incrementCounter} />
+        <MinusBtn decrementCounter={this.decrementCounter} />    
       </>
     );
   }
+}
+
+class PlusBtn extends Component {
+  render() {
+    return (
+    <button onClick={this.props.incrementCounter}>+</button>
+  );
+  }
+}
+
+class MinusBtn extends Component {
+  render() {
+    return (
+    <button onClick={this.props.decrementCounter}>-</button>
+  );
+  }  
 }
 
 class Count extends Component {
