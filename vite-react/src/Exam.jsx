@@ -1,3 +1,15 @@
+//4일차: State사용법
+// function App() {
+//   const [counter, setCounter] = useState(0)
+//   return (
+//     <> 
+//       <div>counter: {counter}</div>
+//       <button onClick={() => setCounter((prev) => prev + 1)}>+</button>
+//       <button onClick={() => setCounter((prev) => prev - 1)}>-</button>
+//     </>
+//   );
+// };
+
 class App extends Component {
   state = { counter: 0 }
   render() {
