@@ -1,80 +1,98 @@
-//4일차: State
+//State
 function App() {
-  const [counter, setCounter] = useState(0)
+  const [counter, setCounter] = useState(0);
   return (
-    <> 
+    <>
       <div>counter: {counter}</div>
       <button onClick={() => setCounter((prev) => prev + 1)}>+</button>
       <button onClick={() => setCounter((prev) => prev - 1)}>-</button>
     </>
   );
-};
+}
 
 class App extends Component {
-  state = { counter: 0 }
+  state = { counter: 0 };
   render() {
     return (
       <>
         <div>counter: {this.state.counter}</div>
-        <button onClick={() => this.setState((state) => ({ counter: state.counter + 1 }))}>+</button>
-        <button onClick={() => this.setState((state) => ({ counter: state.counter - 1 }))}>-</button>
+        <button
+          onClick={() =>
+            this.setState((state) => ({ counter: state.counter + 1 }))
+          }
+        >
+          +
+        </button>
+        <button
+          onClick={() =>
+            this.setState((state) => ({ counter: state.counter - 1 }))
+          }
+        >
+          -
+        </button>
       </>
     );
   }
 }
 
-//5일차: props & 상태 끌어올리기
+//props & 상태 끌어올리기
 function App() {
   const [counter, setCounter] = useState(0);
   const [inputValue, setInputValue] = useState(3);
 
   const incrementCounter = () => {
-    setCounter((prev) => { 
-      return prev + 1 
+    setCounter((prev) => {
+      return prev + 1;
     });
   };
 
   const decrementCounter = () => {
-    setCounter((prev) => { return prev - 1 });
+    setCounter((prev) => {
+      return prev - 1;
+    });
   };
 
   const setCounterNumber = () => {
     setCounter(inputValue);
-  }
+  };
 
   return (
-    <> 
+    <>
       <Count counter={counter} />
       <PlusBtn incrementCounter={incrementCounter} />
       <MinusBtn decrementCounter={decrementCounter} />
-      <CounterInput inputValue={inputValue} setInputValue={setInputValue} setCounterNumber={setCounterNumber} />
+      <CounterInput
+        inputValue={inputValue}
+        setInputValue={setInputValue}
+        setCounterNumber={setCounterNumber}
+      />
     </>
   );
-};
+}
 
 function CounterInput({ inputValue, setInputValue, setCounterNumber }) {
   return (
     <>
-      <input type="number" value={inputValue} onChange={(event) => setInputValue(event.target.value)}/>
+      <input
+        type="number"
+        value={inputValue}
+        onChange={(event) => setInputValue(event.target.value)}
+      />
       <button onClick={setCounterNumber}>입력</button>
     </>
-  )
-}
-
-function PlusBtn( { incrementCounter } ) {
-  return (
-    <button onClick={incrementCounter}>+</button>
   );
 }
 
-function MinusBtn( { decrementCounter } ) {
-  return (
-    <button onClick={decrementCounter}>-</button>
-  );
+function PlusBtn({ incrementCounter }) {
+  return <button onClick={incrementCounter}>+</button>;
 }
 
-function Count( { counter} ) {
-  return <div>counter : {counter}</div>
+function MinusBtn({ decrementCounter }) {
+  return <button onClick={decrementCounter}>-</button>;
+}
+
+function Count({ counter }) {
+  return <div>counter : {counter}</div>;
 }
 
 // class App extends Component {
@@ -93,7 +111,7 @@ function Count( { counter} ) {
 //       <>
 //         <Count counter={ this.state.counter } />
 //         <PlusBtn incrementCounter={this.incrementCounter} />
-//         <MinusBtn decrementCounter={this.decrementCounter} />    
+//         <MinusBtn decrementCounter={this.decrementCounter} />
 //       </>
 //     );
 //   }
@@ -112,7 +130,7 @@ function Count( { counter} ) {
 //     return (
 //     <button onClick={this.props.decrementCounter}>-</button>
 //   );
-//   }  
+//   }
 // }
 
 // class Count extends Component {
@@ -123,5 +141,26 @@ function Count( { counter} ) {
 //     return <div>counter: {this.props.counter}</div>;
 //   }
 // }
+
+//상태 변경 특징
+function App() {
+  const [array, setArray] = useState([1, 2, 3]);
+
+  const handler = () => {
+    const newArray = array.slice();
+    // const newArray = [...array];
+    console.log(newArray);
+    newArray.push(5);
+    setArray(newArray);
+  };
+
+  return (
+    <>
+      array : [{array.join(", ")}]
+      <br />
+      <button onClick={handler}>상태 업데이트!</button>
+    </>
+  );
+}
 
 export default App;
