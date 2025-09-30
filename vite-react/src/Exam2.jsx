@@ -1,6 +1,29 @@
-import { Component, useState } from 'react';
-import './App.css'
+//4일차: State
+function App() {
+  const [counter, setCounter] = useState(0)
+  return (
+    <> 
+      <div>counter: {counter}</div>
+      <button onClick={() => setCounter((prev) => prev + 1)}>+</button>
+      <button onClick={() => setCounter((prev) => prev - 1)}>-</button>
+    </>
+  );
+};
 
+class App extends Component {
+  state = { counter: 0 }
+  render() {
+    return (
+      <>
+        <div>counter: {this.state.counter}</div>
+        <button onClick={() => this.setState((state) => ({ counter: state.counter + 1 }))}>+</button>
+        <button onClick={() => this.setState((state) => ({ counter: state.counter - 1 }))}>-</button>
+      </>
+    );
+  }
+}
+
+//5일차: props & 상태 끌어올리기
 function App() {
   const [counter, setCounter] = useState(0);
   const [inputValue, setInputValue] = useState(3);
