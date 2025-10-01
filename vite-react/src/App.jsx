@@ -2,23 +2,23 @@ import { Component, useState } from "react";
 import "./App.css";
 
 function App() {
-  const [array, setArray] = useState([1, 2, 3]);
-
-  const handler = () => {
-    const newArray = array.slice();
-    // const newArray = [...array];
-    console.log(newArray);
-    newArray.push(5);
-    setArray(newArray);
-  };
-
+  const [todoList, setTodoList] = useState([
+    { id: 0, content: "밥먹기" },
+    { id: 1, content: "코딩 공부하기" },
+  ]);
   return (
     <>
-      array : [{array.join(", ")}]
-      <br />
-      <button onClick={handler}>상태 업데이트!</button>
+      <TodoList todoList={todoList} />
     </>
   );
+}
+
+function TodoList({ todoList }) {
+  <ul>
+    {todoList.map((todo) => (
+      <li key={todo.id}>{todo.content}</li>
+    ))}
+  </ul>;
 }
 
 export default App;
