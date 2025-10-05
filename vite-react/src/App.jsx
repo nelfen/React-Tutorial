@@ -30,7 +30,7 @@ function TodoInput({ todoList, setTodoList }) {
           setInputValue("");
         }}
       >
-        추가하기
+        추가
       </button>
     </>
   );
