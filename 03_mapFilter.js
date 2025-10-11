@@ -1,7 +1,5 @@
 const fruits = [
   { name:"딸기", color:"빨강", 크기:2 },
-  { name:"바나나", color:"노랑", 크기:5 },
-  { name:"키위", color:"초록", 크기:3 },
 ];
 
 console.log(
