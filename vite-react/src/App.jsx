@@ -15,6 +15,7 @@ function App() {
 
 function TodoInput({ todoList, setTodoList }) {
   const [inputValue, setInputValue] = useState("");
+  console.log(inputValue);
   return (
     <>
       <input
