@@ -1,4 +1,4 @@
-function Menu() {
+export default function Menu() {
   return (
     <>
       <Burger />
@@ -46,5 +46,3 @@ function Leap() {
     </div>
   );
 }
-
-export default Menu;
