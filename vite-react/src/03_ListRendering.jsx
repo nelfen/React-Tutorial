@@ -11,7 +11,7 @@ const fruits = [
   { name: "수박", color: "초록", 크기: 8 },
 ];
 
-function FruitList() {
+export default function FruitList() {
   return (
     <>
       {fruits
@@ -24,5 +24,3 @@ function FruitList() {
     </>
   );
 }
-
-export default FruitList;
