@@ -43,7 +43,7 @@ export default function StateBasic() {
     <>
       <h2>State 기본 및 함수형 vs 클래스형 비교</h2>
       <FunctionalState />
-      <StateBasic />
+      <ClassState />
     </>
   )
 }
