@@ -1,7 +1,6 @@
 import { useState } from "react";
-import "./App.css";
 
-function App() {
+export default function MainTodoList() {
   const [todoList, setTodoList] = useState([]);
 
   return (
@@ -62,5 +61,3 @@ function Todo({ todo, setTodoList }) {
     </li>
   );
 }
-
-export default App;
