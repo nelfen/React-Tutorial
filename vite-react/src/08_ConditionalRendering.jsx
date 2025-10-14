@@ -1,7 +1,6 @@
 import { useState } from "react";
-import "./App.css";
 
-export default function App() {
+export default function MoodChanger() {
   const [mood, setMood] = useState("Normal");
   return (
     <>
