@@ -1,7 +1,6 @@
-import "./App.css";
 import { Link, Route, Routes, useLocation, useNavigate, useParams, useSearchParams } from "react-router-dom";
 
-export default function App() {
+export default function ReactRouter() {
   const navigate = useNavigate();
 
   // const location = useLocation();
