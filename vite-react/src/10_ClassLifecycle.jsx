@@ -1,6 +1,6 @@
 import { Component, useState } from "react";
 
-export default function LifeCycle() {
+export default function ClassLifecycle() {
   const [showCounter, setShowCounter] = useState(false);
 
   return (
