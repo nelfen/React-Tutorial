@@ -1,7 +1,6 @@
 import { Component, useState } from "react";
-import "./App.css";
 
-function App() {
+export default function LifeCycle() {
   const [showCounter, setShowCounter] = useState(false);
 
   return (
@@ -45,5 +44,3 @@ class Counter extends Component {
     );
   }
 }
-
-export default App;
