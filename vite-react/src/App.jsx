@@ -1,55 +1,59 @@
-import { Component, useEffect, useState } from "react";
-import "./App.css";
+import { useState, useRef } from "react";
 
 function App() {
-  const [showCounter, setShowCounter] = useState(false);
-
   return (
     <>
-      {showCounter && <Counter />}
-      <button onClick={() => setShowCounter((prev) => !prev)}>show?</button>
-    </>
-  );
-}
-
-function Counter() {
-  const [counter, setCounter] = useState(1);
-  const [counter2, setCounter2] = useState(100);
-
-  // 1. 컴포넌트가 최초로 렌더링 될 때에만 조작을 하고싶다!
-  useEffect(() => {
-    console.log("맨 처음 렌더링 될 때");
-  }, []);
-
-    // 2. 컴포넌트가 렌더링 될 때 조작하고 싶다!
-  useEffect(() => {
-    console.log("리렌더링..");
-  });
-
-  // 3. 특정 상태값이 변할 때에만 조작하고 싶다!
-  useEffect(() => {
-    console.log("counter의 값이 변할 때");
-  }, [counter]);
-
-  useEffect(() => {
-    console.log("counter2의 값이 변할 때");
-  }, [counter2]);
-
-  // 4. 컴포넌트가 최종적으로 언마운트 될 때 조작하고 싶다!
-  useEffect(() => {
-    return () => {
-      console.log("컴포넌트 언마운트");
-    }
-  }, []);
-
-  return (
-    <>
-      <div>counter : {counter}</div>
-      <button onClick={() => setCounter(counter + 1)}>+1</button>
-      <div>counter2 : {counter2}</div>
-      <button onClick={() => setCounter2(counter2 - 1)}>-1</button>
+      <ControlledInput />
+      <br />
+      <UseRefInput />
+      <br />
+      <Counter />
     </>
   );
 }
 
 export default App;
+
+const Counter = () => {
+  const [counter, setCounter] = useState(0);
+  const numberRef = useRef(null);
+
+  return (
+    <>
+      <div>counter: {counter}</div>
+      <button onClick={() => setCounter((prev) => prev + 1)}>+</button>
+      <button onClick={() => setCounter((prev) => prev - 1)}>-</button>
+      <br />
+      <button onClick={() => numberRef.current = counter}>Keep Value</button>
+      <button onClick={() => console.log(numberRef.current)}>Show Value</button>
+    </>
+  );
+};
+
+const UseRefInput = () => {
+  const inputRef = useRef(null);
+  const getInputValue = () => {
+    console.log(inputRef.current.value);
+  };
+  const focusInput = () => {
+    inputRef.current.focus();
+  };
+  return (
+    <>
+      <input ref={inputRef} />
+      <button onClick={getInputValue}>가져오기</button>
+      <button onClick={focusInput}>focus!</button>
+    </>
+  );
+};
+
+const ControlledInput = () => {
+  const [inputValue, setInputValue] = useState("");
+  console.log("ControlledInput");
+  return (
+    <input
+      value={inputValue}
+      onChange={(event) => setInputValue(event.target.value)}
+    />
+  );
+};
