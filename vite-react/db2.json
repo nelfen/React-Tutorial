@@ -1,0 +1,7 @@
+{
+  "data": [
+    {"id":1, "content": "db2 첫번째 데이터"},
+    {"id":2, "content": "db2 두번째 데이터"},
+    {"id":3, "content": "db2 세번째 데이터"}
+  ]
+}

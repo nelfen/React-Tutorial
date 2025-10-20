@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function CustomHookExample() {
+export default function CustomHookExampleMore() {
   const {count, increment, decrement} = useCounter(0, 5);
 
   const { data: data1, loading: loading1 } = useFetch('http://localhost:3000/data')
