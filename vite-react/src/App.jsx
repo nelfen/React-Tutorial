@@ -1,59 +1,22 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 
-function App() {
+export default function CustomHookExample() {
+  const {count, increment, decrement} = useCounter(0);
+
   return (
-    <>
-      <ControlledInput />
-      <br />
-      <UseRefInput />
-      <br />
-      <Counter />
-    </>
+    <div>
+      <div>count: {count}</div>
+      <button onClick={increment}>+</button>
+      <button onClick={decrement}>-</button>
+    </div>
   );
 }
 
-export default App;
+const useCounter = (initialValue = 0) => {
+  const [count, setCount] = useState(initialValue);
 
-const Counter = () => {
-  const [counter, setCounter] = useState(0);
-  const numberRef = useRef(null);
+  const increment = () => setCount((prev) => prev + 1);
+  const decrement = () => setCount((prev) => prev - 1);
 
-  return (
-    <>
-      <div>counter: {counter}</div>
-      <button onClick={() => setCounter((prev) => prev + 1)}>+</button>
-      <button onClick={() => setCounter((prev) => prev - 1)}>-</button>
-      <br />
-      <button onClick={() => numberRef.current = counter}>Keep Value</button>
-      <button onClick={() => console.log(numberRef.current)}>Show Value</button>
-    </>
-  );
-};
-
-const UseRefInput = () => {
-  const inputRef = useRef(null);
-  const getInputValue = () => {
-    console.log(inputRef.current.value);
-  };
-  const focusInput = () => {
-    inputRef.current.focus();
-  };
-  return (
-    <>
-      <input ref={inputRef} />
-      <button onClick={getInputValue}>가져오기</button>
-      <button onClick={focusInput}>focus!</button>
-    </>
-  );
-};
-
-const ControlledInput = () => {
-  const [inputValue, setInputValue] = useState("");
-  console.log("ControlledInput");
-  return (
-    <input
-      value={inputValue}
-      onChange={(event) => setInputValue(event.target.value)}
-    />
-  );
-};
+  return {count, increment, decrement}
+}

@@ -12,11 +12,11 @@ export default function CustomHookExample() {
   );
 }
 
-const useCounter = (initialValue = 0) => {
+const useCounter = (initialValue = 0, step = 1) => {
   const [count, setCount] = useState(initialValue);
 
-  const increment = () => setCount((prev) => prev + 1);
-  const decrement = () => setCount((prev) => prev - 1);
+  const increment = () => setCount((prev) => prev + step);
+  const decrement = () => setCount((prev) => prev - step);
 
   return {count, increment, decrement}
 }
