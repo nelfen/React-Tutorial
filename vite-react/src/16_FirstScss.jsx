@@ -1,4 +1,4 @@
-import './App.scss';
+import './16_FirstScss.scss';
 
 export default function FirstScss() {
   return (
