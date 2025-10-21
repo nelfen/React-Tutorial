@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import './App.css';
+import './App.scss';
 
 function App() {
   // 검색어: 상태(state)로 관리 -> 사용자에게 즉각적으로 UI를 보여주기 위해
