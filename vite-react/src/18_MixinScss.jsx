@@ -1,4 +1,4 @@
-import "./App.scss";
+import "./18_MixinScss.scss";
 
 function App() {
   return (
