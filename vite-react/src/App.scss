@@ -1,12 +1,30 @@
-.bread {
-  color: orange;
+$font-big: 50px;
+$font-mid: 40px;
+$font-small: 30px;
+
+$font-bold: 900;
+$font-thin: 200;
+
+$color-blue: #2e5dc4;
+
+.test {
+  font-size: $font-big;
+  font-weight: $font-bold;
 }
 
-.beef {
-  color: brown;
+h2 {
+  color: $color-blue;
+  font-weight: $font-bold;
+  font-size: $font-mid;
 }
 
-.leap {
-  color: green;
+ul {
+  display: grid;
+  gap: 10px;
 }
 
+li {
+  color: $color-blue;
+  font-weight: $font-thin;
+  font-size: $font-small;
+}

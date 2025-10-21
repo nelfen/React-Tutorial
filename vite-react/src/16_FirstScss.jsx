@@ -1,6 +1,6 @@
 import './App.scss';
 
-function App() {
+export default function FirstScss() {
   return (
     <>
       <div className='test'>테스트용 div 입니다</div>
@@ -14,5 +14,3 @@ function App() {
     </>
   );
 }
-
-export default App;
