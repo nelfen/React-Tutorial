@@ -26,7 +26,7 @@ const BigTextBigBlueButton = styled(BigBlueButton)`
   font-weight: 300;
 `
 
-function App() {
+export default function BlueBtn() {
   return (
     <>
       <Container>
@@ -38,5 +38,3 @@ function App() {
     </>
   );
 }
-
-export default App;
