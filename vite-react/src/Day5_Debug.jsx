@@ -5,7 +5,7 @@ function App() {
 
   const handleClick = () => {
     setPerson({ ...person, age: person.age + 1 }); // 상태를 직접 변경
-    console.log(person); // 콘솔에서는 변경된 값이 보이지만, 화면에는 반영되지 않음
+    console.log(person);
   };
 
   return (
