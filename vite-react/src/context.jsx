@@ -22,7 +22,6 @@ export default function MovieDetail() {
               className="detail-image" 
             />
           </div>
-          
           <div className="detail-info-area">
             <h1>{movie.title}</h1>
             <p>평균 평점: {movie.vote_average}</p>
