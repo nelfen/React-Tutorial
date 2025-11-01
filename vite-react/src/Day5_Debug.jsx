@@ -4,7 +4,7 @@ function App() {
   const [person, setPerson] = useState({ name: 'John', age: 25 });
 
   const handleClick = () => {
-    setPerson({ ...person, age: person.age + 1 }); // 상태를 직접 변경
+    setPerson({ ...person, age: person.age + 1 });
     console.log(person);
   };
 
