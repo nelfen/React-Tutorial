@@ -35,9 +35,6 @@ export default function MovieDetail() {
             <p>{movie.overview}</p>
           </div>
         </div>
-        <button onClick={() => navigate('/')} className="back-button">
-          목록으로 돌아가기
-        </button>
       </div>
     </div>
   );
