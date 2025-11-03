@@ -1,4 +1,4 @@
-import "./App.scss";
+import "./21_StyledComponentGlobal.scss";
 import styled, { createGlobalStyle } from "styled-components";
 import { useState } from "react";
 
