@@ -65,7 +65,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-function App() {
+export default function GlobalComponent() {
   const [input1, setInput1] = useState(0);
   const [input2, setInput2] = useState(0);
   const [input3, setInput3] = useState(0);
@@ -120,4 +120,3 @@ function App() {
   );
 }
 
-export default App;
