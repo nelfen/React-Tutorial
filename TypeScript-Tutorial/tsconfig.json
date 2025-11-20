@@ -1,11 +1,8 @@
 {
   "compilerOptions": {
-    "module": "nodenext",
-    "target": "esnext",
+    "target": "es2016",
+    "module": "ES2015",
     "types": [],
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
     "strict": true,
@@ -15,5 +12,7 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+    "outDir": "dist",
+  },
+  "include": ["src/**/*"]
 }
