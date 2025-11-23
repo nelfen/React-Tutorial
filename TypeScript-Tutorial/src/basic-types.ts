@@ -29,7 +29,7 @@ let infinity: number = Infinity;
 let minusInfinity: number = -Infinity;
 let iAmNotANumber: number = NaN;
 
-//불리언
+//Boolean
 let isOpen: boolean = true;
 let isCompleted: boolean = false;
 
