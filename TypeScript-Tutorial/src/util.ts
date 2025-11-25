@@ -1,3 +1,3 @@
-export const printName = (name: string) => {
-  console.log(name);
+export const printName = (username: string) => {
+  console.log(username);
 }
