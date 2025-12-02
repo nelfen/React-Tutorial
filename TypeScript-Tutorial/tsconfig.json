@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "moduleResolution": "node",
+    "allowJs": true,
     "target": "es2016",
     "module": "ES2015",
     "types": [],
