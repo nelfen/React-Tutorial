@@ -1,3 +1,1 @@
-import { printName } from "./util";
-
-printName("typescript");
+import "./14_dom";
