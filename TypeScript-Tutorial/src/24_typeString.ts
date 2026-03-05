@@ -1,1 +1,1 @@
-const a: number = 1111;
+const a: number = 111;
