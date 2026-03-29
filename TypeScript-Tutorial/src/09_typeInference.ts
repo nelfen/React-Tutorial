@@ -1,3 +1,3 @@
 let message = "Hello TS";
 
-let count = 500;
+let count = 50;
