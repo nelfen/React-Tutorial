@@ -1,3 +1,3 @@
-let message = "Hello TS";
+let message = "Hello TypeScript";
 
 let count = 50;
