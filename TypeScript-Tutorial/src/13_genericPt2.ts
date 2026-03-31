@@ -5,7 +5,6 @@ function merge<T, U>(objA: T, objB: U) {
 const mergedObj = merge({ name: "홍길동" }, { age: 30 });
 console.log(mergedObj.name);
 
-
 //extends
 interface ILengthy {
   length: number;
@@ -20,9 +19,8 @@ function countAndDescribe<T extends ILengthy>(element: T): string {
 }
 
 console.log(countAndDescribe("안녕하세요"));
-console.log(countAndDescribe(["스포츠", "요리"]));
+console.log(countAndDescribe(["스포츠", "개발"]));
 // console.log(countAndDescribe(100));
-
 
 //keyof
 function getValue<T, K extends keyof T>(obj: T, key: K) {
