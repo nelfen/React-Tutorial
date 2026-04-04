@@ -13,7 +13,7 @@ function safeCalculate() {
     if (err instanceof Error) {
       console.log(`에러 발생: ${err.message}`);
     } else {
-      console.log("알 수 없는 에러가 발생했습니다.");
+      console.log("에러가 발생했습니다.");
     }
   } finally {
     console.log("계산 종료!");
