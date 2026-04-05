@@ -16,7 +16,7 @@ function safeCalculate() {
       console.log("에러가 발생했습니다.");
     }
   } finally {
-    console.log("계산 종료!");
+    console.log("종료!");
   }
 }
 
