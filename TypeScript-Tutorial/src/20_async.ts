@@ -9,7 +9,7 @@ async function fetchTodo(id: number): Promise<Todo> {
 
   return {
     id: id,
-    title: "타입스크립트 학습하기",
+    title: "타입스크립트 학습하기!",
     completed: false,
   };
 }
