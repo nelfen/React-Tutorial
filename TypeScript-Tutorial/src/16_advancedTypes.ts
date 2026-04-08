@@ -11,7 +11,7 @@ type Employee = {
 type ElevatedEmployee = Admin & Employee;
 
 const e1: ElevatedEmployee = {
-  name: "김철수",
+  name: "김민수",
   privileges: ["마케팅", "채용"],
   startDate: new Date(),
 };
