@@ -16,7 +16,9 @@ const e1: ElevatedEmployee = {
   startDate: new Date(),
 };
 
-console.log(`${e1.name}님은 오늘부터 근무하며, 권한은 ${e1.privileges}입니다.`);
+console.log(
+  `${e1.name}님은 오늘부터 근무하게 되었으며, 권한은 ${e1.privileges}입니다.`,
+);
 
 //Discriminated Union
 interface SuccessState {
