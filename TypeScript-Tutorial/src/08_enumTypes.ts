@@ -10,6 +10,7 @@ function movePlayer(direction: Direction) {
     console.log("플레이어가 위로 움직입니다. (값: " + direction + ")");
   } else {
     console.log("다른 방향으로 움직입니다.");
+    console.log("방향의 숫자 값: " + direction);
   }
 }
 
