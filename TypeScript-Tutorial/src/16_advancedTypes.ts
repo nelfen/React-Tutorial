@@ -20,7 +20,6 @@ console.log(
   `${e1.name}님은 오늘부터 근무하게 되었으며, 권한은 ${e1.privileges}입니다.`,
 );
 
-//Discriminated Union
 interface SuccessState {
   state: "success";
   response: { body: string };
