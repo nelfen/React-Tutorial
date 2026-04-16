@@ -3,7 +3,7 @@ import { type Product, showPrice, storeName } from "./21_store";
 console.log(`환영합니다! 여기는 ${storeName}입니다.`);
 
 const myItem: Product = {
-  name: "사과",
+  name: "딸기",
   price: 2000
 };
 
