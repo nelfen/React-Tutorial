@@ -16,7 +16,7 @@ if (lastNumber !== undefined) {
 }
 
 //문자형
-const stringArray = ["사과", "복숭아", "포도"];
+const stringArray = ["사과", "복숭아", "망고"];
 const lastFruit = getLastElement(stringArray);
 console.log(`마지막 과일: ${lastFruit}`);
 
