@@ -19,7 +19,7 @@ function countAndDescribe<T extends ILengthy>(element: T): string {
 }
 
 console.log(countAndDescribe("안녕하세요"));
-console.log(countAndDescribe(["스포츠", "개발"]));
+console.log(countAndDescribe(["스포츠", "마케팅"]));
 // console.log(countAndDescribe(100));
 
 //keyof
@@ -27,7 +27,7 @@ function getValue<T, K extends keyof T>(obj: T, key: K) {
   return obj[key];
 }
 
-const person = { name: "김철수", age: 25 };
+const person = { name: "김민수", age: 25 };
 
 console.log(getValue(person, "name"));
 // console.log(getValue(person, "address"));
